@@ -1,0 +1,28 @@
+# Ignorar carpetas de Terraform
+
+**/.terraform/
+
+# Ignorar archivos de estado de Terraform
+
+*.tfstate
+*.tfstate.backup
+
+# Ignorar archivos de plan de Terraform
+
+*.tfplan
+
+# Ignorar lock files
+
+.terraform.lock.hcl
+
+# Archivos de respaldo temporales
+
+*.bak
+*.backup
+*.log
+
+# Archivos de configuración de editores
+
+.vscode/
+.idea/
+*.swp
