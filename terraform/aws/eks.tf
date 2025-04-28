@@ -1,3 +1,4 @@
+# This file is used to configure the backend for Terraform.
 # ----------------- IAM Role -----------------
 
 resource "aws_iam_role" "eks-cluster" {
@@ -20,7 +21,7 @@ POLICY
 }
 
 
-
+#This block creates an IAM role for the EKS cluster with the necessary permissions.
 # ----------------- Policy Attachment -----------------
 
 resource "aws_iam_role_policy_attachment" "amazon-eks-cluster-policy" {
@@ -29,7 +30,7 @@ resource "aws_iam_role_policy_attachment" "amazon-eks-cluster-policy" {
 }
 
 
-
+#This block creates an IAM role policy attachment for the EKS cluster.
 # ----------------- EKS Cluster -----------------
 
 resource "aws_eks_cluster" "cluster" {
@@ -50,7 +51,7 @@ resource "aws_eks_cluster" "cluster" {
 }
 
 
-
+#This block creates eks node groups for the EKS cluster.
 # ----------------- Nodes -----------------
 
 resource "aws_iam_role" "nodes" {
