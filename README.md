@@ -3,8 +3,6 @@
 
 # **ÍNDICE**
 
-# **ÍNDICE**
-
 - [Introducción](#introducción)
   - [Requisitos Previos](#requisitos-previos)
   - [Qué Haremos](#qué-haremos)
