@@ -50,31 +50,9 @@ Este proyecto se enfoca en el despliegue de infraestructura en AWS utilizando Te
 ### **Características principales**:
 
 - **Subnets públicas y privadas**: 
-
-  - Las subnets públicas alojan recursos como balanceadores de carga (Load Balancers) para gestionar el tráfico entrante.
-
-  - Las subnets privadas alojan clústeres y bases de datos, asegurando que estos recursos críticos no sean accesibles directamente desde Internet.
-
 - **Escalamiento y balanceo de tráfico**: 
-
-  - Los balanceadores de carga distribuyen el tráfico entre las zonas de disponibilidad, garantizando un rendimiento óptimo.
-
-  - La infraestructura está diseñada para soportar escalamiento automático.
-
 - **Conexión segura mediante Bastion Host**: 
-
-  - Un Bastion Host permite el acceso seguro a los recursos privados dentro de la VPC.
-
 - **Salida a Internet**: 
-
-  - Las subnets privadas utilizan NAT Gateways para acceder a Internet de manera segura.
-
-  - Las subnets públicas tienen acceso directo a Internet mediante un Internet Gateway.
-
-
-
-Además, el proyecto incluye un pipeline de GitHub Actions para automatizar el despliegue, lo que facilita la implementación y el mantenimiento de la infraestructura. (Aun falta terminar) 
-
 # **NOTA**
 Haga el deploy manualmente ya que no se termino la pipeline
 
