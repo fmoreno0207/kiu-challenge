@@ -11,21 +11,21 @@
 - [Configuración en GitHub](#configuración-en-github)
   - [Obtener sus Llaves de AWS](#obtener-sus-llaves-de-aws)
   - [Crear Conexión de Servicio de AWS](#crear-conexión-de-servicio-de-aws)
-  - [Permitir Push a GitHub](#permitir-push-a-github)
-- [Pipeline de Implementación de Infraestructura de AWS](#pipeline-de-implementación-de-infraestructura-de-aws)
+  <!-- - [Permitir Push a GitHub](#permitir-push-a-github) -->
+<!-- - [Pipeline de Implementación de Infraestructura de AWS](#pipeline-de-implementación-de-infraestructura-de-aws)
   - [Descripción Técnica](#descripción-técnica)
-  - [Recursos Desplegados](#recursos-desplegados)
+  - [Recursos Desplegados](#recursos-desplegados) -->
     - [Backend de Terraform](#backend-de-terraform)
     - [Infraestructura Principal](#infraestructura-principal)
 - [Cómo Desplegar la Infraestructura](#cómo-desplegar-la-infraestructura)
   - [1. Despliegue Manual](#1-despliegue-manual)
     - [Requisitos Previos (Manual)](#requisitos-previos-manual)
     - [Pasos (Manual)](#pasos-manual)
-  - [2. Despliegue Usando el Pipeline de GitHub Actions](#2-despliegue-usando-el-pipeline-de-github-actions)
+  <!-- - [2. Despliegue Usando el Pipeline de GitHub Actions](#2-despliegue-usando-el-pipeline-de-github-actions)
     - [Requisitos Previos (Pipeline)](#requisitos-previos-pipeline)
     - [Pasos (Pipeline)](#pasos-pipeline)
-    - [Qué Hace el Pipeline](#qué-hace-el-pipeline)
-  - [Notas](#notas)
+    - [Qué Hace el Pipeline](#qué-hace-el-pipeline) -->
+ 
 
 
 
