@@ -23,3 +23,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state_e
     }
   }
 }
+
+
+#si el bucket de S3 ya existe, se puede usar el siguiente bloque para evitar la creación de un nuevo bucket
+#terraform import aws_s3_bucket.terraform_state kiu-dev-tf-state-bucket
