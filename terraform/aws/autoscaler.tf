@@ -1,3 +1,5 @@
+#This file contains the configuration for the AWS EKS Cluster Autoscaler
+#This configuration is used to create the IAM role and policy for the EKS Cluster Autoscaler
 data "aws_iam_policy_document" "eks_cluster_autoscaler_assume_role_policy" {
   statement {
     actions = ["sts:AssumeRoleWithWebIdentity"]
@@ -15,6 +17,7 @@ data "aws_iam_policy_document" "eks_cluster_autoscaler_assume_role_policy" {
     }
   }
 }
+
 
 resource "aws_iam_role" "eks_cluster_autoscaler" {
   assume_role_policy = data.aws_iam_policy_document.eks_cluster_autoscaler_assume_role_policy.json

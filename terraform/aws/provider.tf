@@ -1,6 +1,5 @@
 # ----------------- Terraform -----------------
-# Este archivo contiene la configuración del proveedor de AWS y Helm
-# y la configuración del backend de S3 para almacenar el estado de Terraform.
+#This file contains the configuration for the Terraform backend
 terraform {
   required_version = ">= 1.9.0" 
   required_providers {
@@ -14,10 +13,11 @@ terraform {
     }
   }
 
-  #Creación del backend de S3 para almacenar el estado de Terraform
-  #El bucket de S3 y la tabla de DynamoDB deben existir antes de ejecutar el primer plan
+#Creation of the backend for S3 to store the Terraform state
+#The S3 bucket and DynamoDB table must exist before running the first plan
+
   backend "s3" {
-    bucket         = "kiu-dev-tf-state-bucket"          
+    bucket         = "kiu-dev-tf-state-bucket"  
     dynamodb_table = "kiu-dev-tf-state-dynamo-db-table" 
     key            = "terraform.tfstate"
     region         = "us-east-1" 
@@ -36,7 +36,7 @@ provider "aws" {
 
 
 # ----------------- Helm -----------------
-
+#This file contains the configuration for the Helm provider
 data "aws_eks_cluster_auth" "default" {
   name = aws_eks_cluster.cluster.id
 }
