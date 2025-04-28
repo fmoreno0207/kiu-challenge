@@ -47,10 +47,10 @@ Este proyecto se enfoca en el despliegue de infraestructura en AWS utilizando Te
 
 ### **Características principales**:
 
-- **Subnets públicas y privadas**: 
-- **Escalamiento y balanceo de tráfico**: 
-- **Conexión segura mediante Bastion Host**: 
-- **Salida a Internet**: 
+- **Subnets públicas y privadas**
+- **Escalamiento y balanceo de tráfico** 
+- **Conexión segura mediante Bastion Host** 
+- **Salida a Internet** 
 # **NOTA**
 Haga el deploy manualmente ya que no se termino la pipeline
 
@@ -71,7 +71,7 @@ git push
 ```
 ## Obtenga sus llaves de AWS
 
-Estas serán necesarias para que Azure DevOps se conecte a su cuenta de AWS.
+Estas serán necesarias para que se conecte a su cuenta de AWS.
 
 1. Abra la consola de IAM en [https://console.aws.amazon.com/iam/](https://console.aws.amazon.com/iam/).
 2. En la barra de búsqueda, busque "IAM".
@@ -82,22 +82,6 @@ Estas serán necesarias para que Azure DevOps se conecte a su cuenta de AWS.
    - ID de clave de acceso: AKIEEEEEEEEEEEEEEEEE<br>
    - Clave de acceso secreta: wJalrXUtnFEMI/K7MDEEEEEEEEEEEEE
 7. Copie y guarde estas claves en un lugar seguro.
-
-<br/>
-
-## Crear conexión de servicio de AWS
-
-Esta conexión de servicio es necesaria para que nuestros pipelines de interactúen con AWS.
-
-1. Regrese a GITHUB y abra su proyecto.
-2. Vaya a "Configuración del proyecto" en el menú de la izquierda (esquina inferior izquierda).
-3. En el menú de la izquierda, debajo de "Pipelines", seleccione "Conexiones de servicio".
-4. Haga clic en "Crear conexión de servicio".
-5. Seleccione AWS.
-6. Pegue su ID de clave de acceso y su clave de acceso secreta.
-7. En "Nombre de la conexión de servicio", escriba "aws".
-8. Seleccione la opción "Otorgar permiso de acceso a todos los pipelines".
-9. Guarde.
 
 <br/>
 
@@ -121,28 +105,9 @@ Este pipeline despliega la infraestructura base en AWS.
 * Clúster EKS
 * AWS Load Balancer Controller
 
-**Nota:** Los Application Load Balancers creados automáticamente por el AWS Load Balancer Controller no serán gestionados directamente por Terraform en este pipeline.
-
 Para más detalles sobre los recursos desplegados, consulte los [archivos de Terraform](/terraform/aws).
 
-### **Características principales**:
-- **Subnets públicas y privadas**: 
-  - Las subnets públicas alojan recursos como balanceadores de carga (Load Balancers) para gestionar el tráfico entrante.
-  - Las subnets privadas alojan clústeres y bases de datos, asegurando que estos recursos críticos no sean accesibles directamente desde Internet.
-- **Escalamiento y balanceo de tráfico**: 
-  - Los balanceadores de carga distribuyen el tráfico entre las zonas de disponibilidad, garantizando un rendimiento óptimo.
-  - La infraestructura está diseñada para soportar escalamiento automático.
-- **Conexión segura mediante Bastion Host**: 
-  - Un Bastion Host permite el acceso seguro a los recursos privados dentro de la VPC.
-- **Salida a Internet**: 
-  - Las subnets privadas utilizan NAT Gateways para acceder a Internet de manera segura.
-  - Las subnets públicas tienen acceso directo a Internet mediante un Internet Gateway.
-
-Además, el proyecto incluye un pipeline de GitHub Actions para automatizar el despliegue, lo que facilita la implementación y el mantenimiento de la infraestructura.
-
 ---
-
-## **Recursos Desplegados**
 
 ### **Backend de Terraform**
 - **DynamoDB Table**: Se utiliza para el bloqueo de estado de Terraform.
@@ -216,7 +181,7 @@ terraform init
 terraform apply -auto-approve
 ```
 
-Aplica la configuración de la infraestructura:
+<!-- Aplica la configuración de la infraestructura:
 
 2. Despliegue Usando el Pipeline de GitHub Actions
 Requisitos Previos
@@ -241,4 +206,4 @@ Paso 5: Guarda un comando SSH para conectarse al bastion host y lo sube como art
 Notas
 Asegúrate de que los nombres de los recursos (como el bucket S3) sean únicos para evitar conflictos.
 Si un recurso ya existe, puedes importarlo al estado de Terraform utilizando el comando terraform import.
-El pipeline automatiza el proceso, pero el despliegue manual puede ser útil para pruebas o depuración.
+El pipeline automatiza el proceso, pero el despliegue manual puede ser útil para pruebas o depuración. -->
