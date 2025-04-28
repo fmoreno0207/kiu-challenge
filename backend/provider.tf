@@ -1,3 +1,4 @@
+#Este archivo es el que contiene la configuración del proveedor de AWS y la versión de Terraform requerida.
 terraform {
   required_version = ">= 1.9.0" 
   required_providers {
@@ -7,6 +8,8 @@ terraform {
     }
   }
 }
+# # ----------------- AWS -----------------
+# # Este bloque define el proveedor de AWS y la región en la que se desplegarán los recursos.
 provider "aws" {
   # region = var.region
 
