@@ -62,13 +62,37 @@ Pasos
 Inicializar y desplegar el backend:
 
 Navega al directorio del backend:
+```
+cd terraform/backend
+```
 Inicializa Terraform:
+```
+terraform init
+```
+Genera un plan de la infra de deployar
+```
+terraform plan
+```
+
 Aplica la configuración del backend:
+
 Inicializar y desplegar la infraestructura principal:
+```
+terraform apply -auto-approve
+```
 
 Navega al directorio de la infraestructura principal:
-Copia el archivo de estado del backend:
+```
+cd ../aws
+```
 Inicializa Terraform:
+```
+terraform init
+```
+```
+terraform apply -auto-approve
+```
+
 Aplica la configuración de la infraestructura:
 
 2. Despliegue Usando el Pipeline de GitHub Actions
@@ -77,6 +101,7 @@ Configurar los secretos en el repositorio de GitHub:
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 AATT_AWS_REGION (Región de AWS)
+
 Pasos
 Realiza un push de los cambios al repositorio remoto.
 Ve a la pestaña Actions en GitHub.
