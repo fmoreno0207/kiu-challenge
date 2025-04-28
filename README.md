@@ -11,10 +11,6 @@
 - [Configuración en GitHub](#configuración-en-github)
   - [Obtener sus Llaves de AWS](#obtener-sus-llaves-de-aws)
   - [Crear Conexión de Servicio de AWS](#crear-conexión-de-servicio-de-aws)
-  <!-- - [Permitir Push a GitHub](#permitir-push-a-github) -->
-<!-- - [Pipeline de Implementación de Infraestructura de AWS](#pipeline-de-implementación-de-infraestructura-de-aws)
-  - [Descripción Técnica](#descripción-técnica)
-  - [Recursos Desplegados](#recursos-desplegados) -->
     - [Backend de Terraform](#backend-de-terraform)
     - [Infraestructura Principal](#infraestructura-principal)
 - [Cómo Desplegar la Infraestructura](#cómo-desplegar-la-infraestructura)
@@ -85,7 +81,7 @@ Estas serán necesarias para que se conecte a su cuenta de AWS.
 
 <br/>
 
-## PIPELINE DE IMPLEMENTACIÓN DE INFRAESTRUCTURA DE AWS
+<!-- ## PIPELINE DE IMPLEMENTACIÓN DE INFRAESTRUCTURA DE AWS
 
 ### Descripción Técnica
 
@@ -105,7 +101,7 @@ Este pipeline despliega la infraestructura base en AWS.
 * Clúster EKS
 * AWS Load Balancer Controller
 
-Para más detalles sobre los recursos desplegados, consulte los [archivos de Terraform](/terraform/aws).
+Para más detalles sobre los recursos desplegados, consulte los [archivos de Terraform](/terraform/aws). -->
 
 ---
 
