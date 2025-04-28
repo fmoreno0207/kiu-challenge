@@ -41,53 +41,6 @@ Este proyecto contiene la configuración necesaria para desplegar una infraestru
   ```bash
   git clone https://github.com/tu-usuario/kiu-challenge.git
   cd kiu-challenge
-
-
-
-  ```markdown
-# KIU Challenge - AWS Infrastructure Deployment
-
-Este proyecto contiene la configuración necesaria para desplegar una infraestructura en AWS utilizando Terraform. La infraestructura incluye recursos como una VPC, subnets públicas y privadas, gateways, tablas de rutas, y servicios como DynamoDB y S3 para el backend de Terraform. Además, se incluye un pipeline de GitHub Actions para automatizar el despliegue.
-
----
-
-## **Recursos Desplegados**
-
-### **Backend de Terraform**
-- **DynamoDB Table**: Se utiliza para el bloqueo de estado de Terraform.
-  - Nombre: `${var.project}-${var.environment_name}-tf-state-dynamo-db-table`
-  - Modo de facturación: `PAY_PER_REQUEST`
-  - Llave primaria: `LockID`
-- **S3 Bucket**: Almacena el estado remoto de Terraform.
-  - Nombre: `${var.project}-${var.environment_name}-tf-state-bucket`
-  - ACL: `private`
-
-### **Infraestructura Principal**
-- **VPC**: Red principal con un rango CIDR de `10.0.0.0/16`.
-- **Subnets**:
-  - Subnets públicas y privadas en tres zonas de disponibilidad (AZ-a, AZ-b, AZ-c).
-- **Internet Gateway**: Permite el acceso a Internet para las subnets públicas.
-- **NAT Gateways**: Permiten que las subnets privadas accedan a Internet.
-- **Tablas de Rutas**:
-  - Tabla de rutas pública asociada a las subnets públicas.
-  - Tablas de rutas privadas asociadas a las subnets privadas.
-- **Elastic IPs**: Asociadas a los NAT Gateways.
-- **ElastiCache**: Endpoints para bases de datos Redis en diferentes entornos (`dev`, `stage`, `prod`).
-
----
-
-## **Cómo Desplegar la Infraestructura**
-
-### **1. Despliegue Manual**
-
-#### **Requisitos Previos**
-- Tener instalado:
-  - [Terraform](https://www.terraform.io/downloads.html)
-  - AWS CLI configurado con credenciales válidas.
-- Clonar este repositorio:
-  ```bash
-  git clone https://github.com/tu-usuario/kiu-challenge.git
-  cd kiu-challenge
   ```
 
 #### **Pasos**
